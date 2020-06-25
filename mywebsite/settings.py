@@ -28,7 +28,7 @@ SECRET_KEY = '66707b2f9587a3423257a317deb51d70'
 # DEBUG = True
 
 # SECRET_KEY = config('SECRET_KEY')
-DEBUG = False
+DEBUG = True
 # DATABASES = {
 #     'default': dj_database_url.config(
 #         default=config('DATABASE_URL')
@@ -129,7 +129,7 @@ USE_TZ = True
 
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/staticfiles/'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 MEDIA_URL = '/Images/'
 
 STATICFILES_DIRS = [
