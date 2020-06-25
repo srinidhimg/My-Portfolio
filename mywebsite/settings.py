@@ -23,9 +23,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'iwqfa9wjik+*-v2tmq0#c848x+u*q8&#l(i%#75@41q=x^x_k)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+# DEBUG = True
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+}
+ALLOWED_HOSTS = ['datascienceportfolio.herokuapp.com']
 
 
 # Application definition
@@ -120,7 +128,7 @@ USE_TZ = True
 
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/staticfiles/'
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MEDIA_URL = '/Images/'
 
 STATICFILES_DIRS = [
