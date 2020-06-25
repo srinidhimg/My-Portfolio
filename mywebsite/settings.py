@@ -34,7 +34,7 @@ DEBUG = True
 #         default=config('DATABASE_URL')
 #     )
 # }
-ALLOWED_HOSTS = ['datascienceportfolio.herokuapp.com']
+ALLOWED_HOSTS = ['srinidhiportfolio.herokuapp.com']
 
 
 # Application definition
@@ -131,10 +131,10 @@ STATIC_ROOT =os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 MEDIA_URL = '/Images/'
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+# )
 STATICFILES_DIRS = [
 os.path.join(BASE_DIR, 'static')
 ]
